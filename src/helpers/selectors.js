@@ -24,3 +24,14 @@ export function getInterview(state, interview) {
   }
 
 }
+
+export function getInterviewersForDay(state, day) {
+  let intArray = [];
+  state.days.map(dayObj => {
+    if (dayObj.name === day) {
+    (dayObj.interviewers.forEach(intID => intArray.push(intID)))
+    }
+  })
+  const output = intArray.map(int => state.interviewers[int])
+  return output;
+}
