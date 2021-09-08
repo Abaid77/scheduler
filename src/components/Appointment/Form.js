@@ -8,6 +8,7 @@ export default function Form (props) {
   const [currentName, setName] = useState(props.name || "");
   const [currentInterviewer, setInterviewer] = useState(props.interviewer || null)
 
+  //function to clear all fields
   const reset = () => {
     setName("");
     setInterviewer(null)
@@ -16,6 +17,7 @@ export default function Form (props) {
   const cancel = () => {
     reset();
     props.onCancel();
+    
   }
 
   return (
@@ -39,7 +41,9 @@ export default function Form (props) {
       <section className="appointment__card-right">
         <section className="appointment__actions">
           <Button danger onClick={cancel}>Cancel</Button>
-          <Button confirm onClick={props.onSave}>Save</Button>
+          <Button confirm onClick={() => 
+            currentName === "" || currentInterviewer === null ? "disabled" : 
+            props.onSave(currentName, currentInterviewer)}>Save</Button>
         </section>
       </section>
     </main>
