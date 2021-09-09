@@ -51,6 +51,18 @@ Amit Baid
   npm run storybook
   ```
 
+## Screenshots
+
+!["Screenshot of one days appointments"](https://github.com/Abaid77/scheduler/blob/master/docs/booked-appointments.png?raw=true)
+###### Appointments for single day 
+
+!["Screenshot of confirm delete"](https://github.com/Abaid77/scheduler/blob/master/docs/delete-confirm.png?raw=true)
+###### Confirm delete view
+
+!["Screenshot of open form"](https://github.com/Abaid77/scheduler/blob/master/docs/open-form.png?raw=true)
+###### Open form view
+
+
 
 ## Dependencies
   - axios 0.21.1,
