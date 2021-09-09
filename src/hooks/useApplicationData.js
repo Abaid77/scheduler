@@ -30,9 +30,9 @@ export default function useApplicationData(props) {
           appointments,
           days
         });
-      })
+      });
    
-  }
+  };
 
   // function for canceling an interview
 
@@ -53,8 +53,8 @@ export default function useApplicationData(props) {
           appointments,
           days
         });
-      })
-  }
+      });
+  };
 
 
   //axios request for api data
@@ -66,7 +66,7 @@ export default function useApplicationData(props) {
     ]).then(all => {
       setState(prev => ({...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data}))
     })
-  }, [])
+  }, []);
 
   // return a new days array with updated spot numbers
   function updateSpots(dayName, days, appointments) {

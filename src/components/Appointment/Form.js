@@ -30,6 +30,7 @@ export default function Form (props) {
     props.onSave(currentName, currentInterviewer);
   }
 
+  // JSX Return
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
@@ -57,5 +58,5 @@ export default function Form (props) {
         </section>
       </section>
     </main>
-  )
-}
+  );
+};

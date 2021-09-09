@@ -4,34 +4,38 @@ export function getAppointmentsForDay(state, day) {
   let appArray = [];
   state.days.map(dayObj => {
     if (dayObj.name === day) {
-    (dayObj.appointments.forEach(appID => appArray.push(appID)))
+    (dayObj.appointments.forEach(appID => appArray.push(appID)));
     }
   })
-  const output = appArray.map(app => state.appointments[app])
+  const output = appArray.map(app => state.appointments[app]);
   return output;
-}
+};
+
+// Function to search for specific interview
 
 export function getInterview(state, interview) {
   if (!interview) {
     return null;
   }
 
-  const interviewerInfo = state.interviewers[interview.interviewer]
+  const interviewerInfo = state.interviewers[interview.interviewer];
   return {
     student: interview.student,
     interviewer: interviewerInfo
 
   }
 
-}
+};
+
+// Function to get the interviewers for the day
 
 export function getInterviewersForDay(state, day) {
   let intArray = [];
   state.days.map(dayObj => {
     if (dayObj.name === day) {
-    (dayObj.interviewers.forEach(intID => intArray.push(intID)))
+    (dayObj.interviewers.forEach(intID => intArray.push(intID)));
     }
   })
-  const output = intArray.map(int => state.interviewers[int])
+  const output = intArray.map(int => state.interviewers[int]);
   return output;
-}
+};

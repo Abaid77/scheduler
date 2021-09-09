@@ -23,7 +23,7 @@ export default function useVisualMode (intial) {
   const back = () => {
     let historyReplace = [...history];
     historyReplace.pop();
-    setHistory((prev) => historyReplace)
+    setHistory((prev) => historyReplace);
     if(history.length > 1) {
       setMode((prev) => historyReplace[(historyReplace.length - 1)]);
     }
