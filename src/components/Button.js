@@ -9,6 +9,8 @@ export default function Button(props) {
       "button--confirm": props.confirm,
       "button--danger": props.danger
    });
+
+   //JSX Return
    return (
      <button
        className={buttonClass}

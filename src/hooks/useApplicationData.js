@@ -13,7 +13,6 @@ export default function useApplicationData(props) {
 
   //function for booking interview
   function bookInterview(id, interview) {
-    console.log(id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
