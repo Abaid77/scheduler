@@ -20,6 +20,7 @@ export default function InterviewerList (props) {
     interviewers: PropTypes.array.isRequired
   };
 
+  // JSX Return 
   return (
     <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>

@@ -11,6 +11,7 @@ export default function InterviewerListItem(props) {
     "interviewers__item--selected-image": props.selected,
   })
 
+  // JSX Return 
   return (
     <li 
       className={interviewerStyles}
@@ -23,5 +24,5 @@ export default function InterviewerListItem(props) {
       />
       {props.selected && props.name}
     </li>
-  )
+  );
 }

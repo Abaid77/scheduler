@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Empty (props) {
 
+  // JSX Return
   return (
     <main className="appointment__add">
       <img
